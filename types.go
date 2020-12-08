@@ -26,6 +26,7 @@ const (
 	EOSEUR   = "EOSEUR"
 	EOSUSD   = "EOSUSD"
 	EOSXBT   = "EOSXBT"
+	ETHUSDT  = "ETHUSDT"
 	GNOETH   = "GNOETH"
 	GNOEUR   = "GNOEUR"
 	GNOUSD   = "GNOUSD"
@@ -35,6 +36,7 @@ const (
 	QTUMEUR  = "QTUMEUR"
 	QTUMUSD  = "QTUMUSD"
 	QTUMXBT  = "QTUMXBT"
+	TRXUSD   = "TRXUSD"
 	USDTZUSD = "USDTZUSD"
 	XBTUSDT  = "XBTUSDT"
 	XETCXETH = "XETCXETH"
@@ -133,6 +135,7 @@ type AssetPairsResponse struct {
 	QTUMEUR  AssetPairInfo
 	QTUMUSD  AssetPairInfo
 	QTUMXBT  AssetPairInfo
+	TRXUSD   AssetPairInfo
 	USDTZUSD AssetPairInfo
 	XETCXETH AssetPairInfo
 	XETCXXBT AssetPairInfo
@@ -227,6 +230,7 @@ type AssetsResponse struct {
 	GNO  AssetInfo
 	KFEE AssetInfo
 	QTUM AssetInfo
+	TRX  AssetInfo
 	USDT AssetInfo
 	XDAO AssetInfo
 	XETC AssetInfo
@@ -422,6 +426,7 @@ type TickerResponse struct {
 	EOSEUR   PairTickerInfo
 	EOSUSD   PairTickerInfo
 	EOSXBT   PairTickerInfo
+	ETHUSDT  PairTickerInfo
 	GNOETH   PairTickerInfo
 	GNOEUR   PairTickerInfo
 	GNOUSD   PairTickerInfo
@@ -431,6 +436,7 @@ type TickerResponse struct {
 	QTUMEUR  PairTickerInfo
 	QTUMUSD  PairTickerInfo
 	QTUMXBT  PairTickerInfo
+	TRXUSD   PairTickerInfo
 	USDTZUSD PairTickerInfo
 	XBTUSDT  PairTickerInfo
 	XETCXETH PairTickerInfo
