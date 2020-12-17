@@ -316,6 +316,21 @@ type TradeBalanceResponse struct {
 	MarginLevel               float64 `json:"ml,string"`
 }
 
+type Deposit struct {
+	Aclass   string `json:"aclass"`
+	Method   string `json:"method"`
+	Asset    string `json:"asset"`
+	Refid    string `json:"refid"`
+	Txid     string `json:"txid"`
+	Info     string `json:"info"`
+	Status   string `json:"status"`
+	Amount   float64 `json:"amount,string"`
+	Fee      float64 `json:"fee,string"`
+	Time     float64 `json:"time"`
+}
+
+type DepositsResponse []Deposit
+
 // Fees includes fees information for different currencies
 type Fees struct {
 	ADACAD   FeeInfo

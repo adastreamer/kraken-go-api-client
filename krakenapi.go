@@ -277,6 +277,29 @@ func (api *KrakenAPI) Trades(pair string, since int64) (*TradesResponse, error) 
 	return result, nil
 }
 
+// Return deposits list
+func (api *KrakenAPI) Deposits(args map[string]string) (*DepositsResponse, error) {
+	params := url.Values{}
+	if value, ok := args["asset"]; ok {
+		params.Add("asset", value)
+	}
+	if value, ok := args["aclass"]; ok {
+		params.Add("aclass", value)
+	}
+	if value, ok := args["method"]; ok {
+		params.Add("method", value)
+	}
+	if value, ok := args["ofs"]; ok {
+		params.Add("ofs", value)
+	}
+	resp, err := api.queryPrivate("DepositStatus", params, &DepositsResponse{})
+	if err != nil {
+		return nil, err
+	}
+
+	return resp.(*DepositsResponse), nil
+}
+
 // Balance returns all account asset balances
 func (api *KrakenAPI) Balance() (*BalanceResponse, error) {
 	resp, err := api.queryPrivate("Balance", url.Values{}, &BalanceResponse{})
