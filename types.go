@@ -231,6 +231,7 @@ type AssetsResponse struct {
 	KFEE AssetInfo
 	QTUM AssetInfo
 	TRX  AssetInfo
+	USDC AssetInfo
 	USDT AssetInfo
 	XDAO AssetInfo
 	XETC AssetInfo
@@ -277,6 +278,7 @@ type BalanceResponse struct {
 	GNO  float64 `json:"GNO,string"`
 	QTUM float64 `json:"QTUM,string"`
 	KFEE float64 `json:"KFEE,string"`
+	USDC float64 `json:"USDC,string"`
 	USDT float64 `json:"USDT,string"`
 	XDAO float64 `json:"XDAO,string"`
 	XETC float64 `json:"XETC,string"`
